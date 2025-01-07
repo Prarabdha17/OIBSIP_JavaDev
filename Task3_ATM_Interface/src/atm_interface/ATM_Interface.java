@@ -1,3 +1,4 @@
+//-----------------------------ATM Interface-------------------------
 package atm_interface;
 
 import java.util.Scanner;
@@ -12,6 +13,7 @@ class BankAccount
 	int transactions = 0;
 	String transactionHistory = "";
 	
+//---------------------User Registration-----------------------------	
 	public void register() 
 	{
 		Scanner sc = new Scanner(System.in);
@@ -23,8 +25,9 @@ class BankAccount
 		this.password = sc.nextLine();
 		System.out.println("\nEnter your Account Number: ");
 		this.accountNo = sc.nextLine();
-		System.out.println("\nRegistration Successful. Please Log in to your bank Account");
+		System.out.println("\nREGISTRATION SUCCESSFUL!!!!!!!\n \nPlease Log in to your bank Account");
 	}
+//---------------------User Log in-----------------------------------
 	public boolean login() 
 	{
 		boolean isLogin = false;
@@ -40,12 +43,12 @@ class BankAccount
 					String Password = sc.nextLine();
 					if(Password.equals(password)) 
 					{
-						System.out.println("Login Successful");
+						System.out.println("LOGIN SUCCESSFUL!!!!!!!");
 						isLogin = true;
 					}
 					else 
 					{
-						System.out.println("\nInvalid Password");
+						System.out.println("\nINVALID PASSWORD!!!!!!!");
 					}
 				}
 			}
@@ -56,6 +59,8 @@ class BankAccount
 		}
 		return isLogin;
 	}
+
+//--------------------------Withdraw------------------------
 	public void withdraw()
 	{
 		System.out.println("Enter Amount Withdraw: ");
@@ -81,6 +86,8 @@ class BankAccount
 			
 		}
 	}
+	
+//------------------------Deposit-------------------------------
 	public void deposit()
 	{
 		System.out.println("Enter Amount to Deposit: ");
@@ -106,6 +113,8 @@ class BankAccount
 			
 		}
 	}
+
+//---------------------------Transfer---------------------------
 	public void transfer()
 	{	Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Recipent's name: ");
@@ -120,7 +129,7 @@ class BankAccount
 			{
 				transactions++;
 				balance -= amount;
-				System.out.println("\nSuccessfully Trasnfered to "+ recipent);
+				System.out.println("\nSuccessfully Transfered to "+ recipent);
 				String str = amount + "Rs Transfered to "+ recipent +"\n";
 				transactionHistory = transactionHistory.concat(str);
 			}
@@ -140,11 +149,13 @@ class BankAccount
 		}
 	}
 	
+//------------------------Balance Check-----------------------------
 	public void checkBalance() 
 	{
-		System.out.println("\n" + balance +"Rs");
+		System.out.println("\nTotal Balance = " + balance +" Rs");
 	}
 	
+//-----------------------Transfer Amount----------------------------
 	public void transHistory() 
 	{
 		if(transactions==0)
@@ -188,9 +199,9 @@ public class ATM_Interface
 	}
 	public static void main(String[] args) 
 	{
-		System.out.println("\n**********Welcome To ATM Interface*********");
-		System.out.println("Choose What You Want to Do....");
-		System.out.println(" 1. Resister\n2.Exit");
+		System.out.println("\n____________Welcome To ATM Interface____________");
+		System.out.println("\nEnter Your Choice.....");
+		System.out.println("1. Register\n2. Exit");
 		int choose = takenIntegerInput(2);
 		
 		if(choose == 1)
@@ -199,36 +210,42 @@ public class ATM_Interface
 			b.register();
 			while(true)
 			{
-				System.out.println("Choose What You Want to Do....");
-				System.out.println(" 1. Resister\n2.Exit");
+				System.out.println("\nEnter your choice.....");
+				System.out.println("1. Login\n2. Exit");
 				int ch = takenIntegerInput(2);
 				if(ch==1)
 				{
 					if(b.login())
 					{
-						System.out.println("\nWelcome Back "+ b.name+".......");
+						System.out.println("\n--------Welcome Back "+ b.name+"--------");
 						boolean isFinished =false;
 						while(!isFinished)
 						{
-							System.out.println("Choose What You Want to Do....");
-							System.out.println(" \n1.Withdraw\n2.Deposit\n3.Transfer\n4.Check Balance\n5.Transaction History\n6.Exit");
+							System.out.println("\nChoose your Activity......\n");
+							System.out.println("1.Withdraw\n2.Deposit\n3.Transfer\n4.Check Balance\n5.Transaction History\n6.Exit");
 							
-							int c = takenIntegerInput(2);
+							int c = takenIntegerInput(6);
 							switch(c)
 							{
 							case 1:
 								b.withdraw();
+								break;
 							case 2:
 								b.deposit();
+								break;
 							case 3:
 								b.transfer();
+								break;
 							case 4:
 								b.checkBalance();
+								break;
 							case 5:
 								b.transHistory();
+								break;
 							case 6:
 								isFinished = true;
-								break;
+								System.out.println("Exited....\n Thank You For Using. Visit Again!!!!!!!\n");
+								System.out.println("-----x-------x---------x-------x-------x-------x-------x------");
 							}
 							
 						}
@@ -240,6 +257,7 @@ public class ATM_Interface
 				}
 				else
 				{
+					System.out.println("Exited....\nSee you Again.......");
 					System.exit(0);
 				}
 			}
