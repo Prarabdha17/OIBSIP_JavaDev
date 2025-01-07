@@ -106,7 +106,7 @@ class BankAccount
 			
 		}
 	}
-	public void trasfer()
+	public void transfer()
 	{	Scanner sc = new Scanner(System.in);
 		System.out.println("Enter Recipent's name: ");
 		String recipent = sc.nextLine();
@@ -188,7 +188,62 @@ public class ATM_Interface
 	}
 	public static void main(String[] args) 
 	{
+		System.out.println("\n**********Welcome To ATM Interface*********");
+		System.out.println("Choose What You Want to Do....");
+		System.out.println(" 1. Resister\n2.Exit");
+		int choose = takenIntegerInput(2);
 		
+		if(choose == 1)
+		{
+			BankAccount b = new BankAccount();
+			b.register();
+			while(true)
+			{
+				System.out.println("Choose What You Want to Do....");
+				System.out.println(" 1. Resister\n2.Exit");
+				int ch = takenIntegerInput(2);
+				if(ch==1)
+				{
+					if(b.login())
+					{
+						System.out.println("\nWelcome Back "+ b.name+".......");
+						boolean isFinished =false;
+						while(!isFinished)
+						{
+							System.out.println("Choose What You Want to Do....");
+							System.out.println(" \n1.Withdraw\n2.Deposit\n3.Transfer\n4.Check Balance\n5.Transaction History\n6.Exit");
+							
+							int c = takenIntegerInput(2);
+							switch(c)
+							{
+							case 1:
+								b.withdraw();
+							case 2:
+								b.deposit();
+							case 3:
+								b.transfer();
+							case 4:
+								b.checkBalance();
+							case 5:
+								b.transHistory();
+							case 6:
+								isFinished = true;
+								break;
+							}
+							
+						}
+					}
+					else
+					{
+						System.exit(0);
+					}
+				}
+				else
+				{
+					System.exit(0);
+				}
+			}
+		}
 	}
 	
 }
