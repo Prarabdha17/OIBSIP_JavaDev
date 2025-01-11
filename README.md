@@ -26,7 +26,7 @@ _Create a system to allow users to book tickets_
 
 **Outcome:**
 
-![Online Reservation System Screenshot]()
+![Online Reservation System Screenshot](![OnlineResSys](https://github.com/user-attachments/assets/fc925d5f-b5de-446b-8dd3-f5e692543da4))
 
 ---
 
@@ -44,7 +44,7 @@ _Create an interactive game where the user guesses a randomly generated number w
 
 **Outcome:**
 
-![Number Guessing Game Screenshot]()
+![Number Guessing Game Screenshot](![NumberGuess](https://github.com/user-attachments/assets/ca9517e6-1ea7-4593-846d-2eee9e5ab382))
 
 ---
 
@@ -62,7 +62,8 @@ _Develop a console-based ATM system to perform basic banking operations like wit
 
 **Outcome:**
 
-![ATM Interface Screenshot]()
+![ATM Interface Screenshot](![ATM](https://github.com/user-attachments/assets/c61a8d50-968f-4cab-8072-319fcdd3f609)
+![ATM2](https://github.com/user-attachments/assets/4b00532c-abe6-4552-801f-ccfb38e2aab9))
 
 ---
 
