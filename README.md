@@ -48,7 +48,7 @@ _Create an interactive game where the user guesses a randomly generated number w
 
 Number Guessing Game Screenshot:
 
-![NumberGuess](https://github.com/user-attachments/assets/ca9517e6-1ea7-4593-846d-2eee9e5ab382))
+![NumberGuess](https://github.com/user-attachments/assets/ca9517e6-1ea7-4593-846d-2eee9e5ab382)
 
 ---
 
@@ -89,7 +89,7 @@ ATM Interface Screenshot:
 ## 📩 Contact
 Feel free to reach out for queries or collaborations:
 
-Email: prarabdha.dabhade@gmail.com
-LinkedIn: http://linkedin.com/in/prarabdha-d
+- Email: prarabdha.dabhade@gmail.com
+- LinkedIn: http://linkedin.com/in/prarabdha-d
 
 ---
