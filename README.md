@@ -75,7 +75,7 @@ ATM Interface Screenshot:
 
 ## 🛠 Technologies Used
 - Java: Language used for development.
-- IDE: Mention the IDE or editor (e.g., IntelliJ IDEA, Eclipse).
+- IDE: Eclipse.
 - Version Control: Git and GitHub.
 
 ---
